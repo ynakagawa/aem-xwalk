@@ -1,0 +1,194 @@
+.utility-banner {
+  background: var(--ut-banner-background-color);
+  padding-inline: var(--layout-padding-inline);
+}
+
+.utility-banner>div {
+  display: flex;
+  color: var(--ut-banner-text-color);
+  align-items: center;
+  font-size: var(--font-size-xs);
+  position: relative;
+  max-width: var(--layout-max-width);
+  margin: 0 auto;
+  padding-block: var(--spacing-12);
+  justify-content: space-between;
+}
+
+.utility-banner>div:has(.utility-banner-col-1 .carousel-slides > li:only-child) {
+  /* This is required to center align wherein one promo banner present. */
+  justify-content: center;
+}
+
+.utility-banner p,
+.utility-banner span,
+.utility-banner a {
+  color: var(--ut-banner-text-color);
+}
+
+.utility-banner a {
+  color: var(--ut-banner-text-color);
+  text-decoration: none;
+}
+
+.utility-banner .utility-banner-col-0 a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-10);
+  height: var(--spacing-16);
+  line-height: var(--line-height-md);
+  
+  /* Keeping the clickable width max to the content width. */
+  max-width: fit-content;
+}
+
+.utility-banner.space-around .utility-banner-col-0 a,
+.utility-banner.space-around .utility-banner-col-2 a {
+  font-weight: var(--font-weight-regular);
+}
+
+.utility-banner.space-around .utility-banner-col-0 a:hover,
+.utility-banner.space-around .utility-banner-col-2 a:hover {
+  color: var(--ut-carousel-link-hover-color);
+  font-weight: var(--font-weight-semibold);
+}
+
+.utility-banner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.utility-banner .utility-banner-col-0,
+.utility-banner .utility-banner-col-2 {
+  margin: 0;
+  display: none;
+}
+
+.utility-banner .utility-banner-col-0 img {
+ filter: brightness(0) var(--ut-banner-icon-color);
+}
+ 
+.utility-banner .utility-banner-col-1>p {
+  margin: 0;
+  text-align: center;
+}
+
+.utility-banner .utility-banner-col-1 .carousel.plain-text .carousel-navigation-buttons button::after {
+  color: var(--ut-banner-text-color);
+}
+
+.utility-banner .utility-banner-col-1 .carousel.plain-text .carousel-slide-content a:hover {
+  color: var(--ut-carousel-link-hover-color);
+  font-weight: var(--font-weight-semibold);
+}
+
+.utility-banner .utility-banner-col-1 ul {
+  flex-direction: row;
+}
+
+.utility-banner .utility-banner-col-2 ul {
+  flex-direction: column;
+}
+
+.utility-banner .utility-banner-col-0 p,
+.utility-banner .utility-banner-col-2 p {
+  margin: 0;
+}
+
+.utility-banner .utility-banner-col-0 .icon img:hover {
+  filter: brightness(0) var(--ut-banner-icon-hover-color)
+}
+
+.utility-banner .utility-banner-col-1 {
+  max-width: 100%;
+}
+
+.utility-banner .carousel .carousel-navigation-buttons button:nth-child(1) {
+  left: var(--negative-spacing-30);
+  border: none;
+}
+
+.utility-banner .carousel .carousel-navigation-buttons button:nth-child(2) {
+  right: var(--negative-spacing-30);
+  border: none;
+}
+
+.utility-banner .utility-banner-col-2 a.hidden {
+  display: none;
+}
+
+/* Tablet specific style rules. width >= 600px and width < 1200px */
+@media (width >=600px) and (width < 1200px) {
+  .utility-banner .utility-banner-col-0,
+  .utility-banner .utility-banner-col-2 {
+    display: none;
+  }
+
+  .utility-banner .carousel .carousel-navigation-buttons button:nth-child(1) {
+    left: unset;
+  }
+
+  .utility-banner .carousel .carousel-navigation-buttons button:nth-child(2) {
+    left: unset;
+  }
+}
+
+@media (width >=1200px) { 
+  .utility-banner > div{
+    height: 100%;
+    font-size: var(--font-size-md);
+    padding-block: var(--spacing-15);
+  }
+
+  .utility-banner>div:has(.utility-banner-col-1 .carousel-slides > li:only-child) {
+    justify-content: space-between;
+  }
+
+  .utility-banner .utility-banner-col-1 .carousel.plain-text .carousel-slide .carousel-slide-content {
+     margin: unset;
+     width: 100%;
+  }
+
+  .utility-banner .utility-banner-col-1 .carousel.plain-text .carousel-slide {
+    width: 100%;
+  }
+
+  .utility-banner {
+    height: var(--utility-banner-height);
+  }
+
+  .utility-banner .utility-banner-col-0 {
+    display: block;
+    width: var(--ut-banner-column-width);
+  }
+
+  .utility-banner .utility-banner-col-2 {
+    display: block;
+    width: 12%
+  }
+
+  .utility-banner .utility-banner-col-1 {
+    width: 55%;
+  }
+
+  .utility-banner .utility-banner-col-2 p {
+    text-align: end;
+  }
+
+  .utility-banner .carousel .carousel-navigation-buttons button:nth-child(1) {
+    left: calc(0rem - var(--spacing-60));
+  }
+
+  .utility-banner .carousel .carousel-navigation-buttons button:nth-child(2) {
+    left: var(--spacing-60);
+  }
+
+  .utility-banner .utility-banner-col-0 p a:focus-visible {
+    outline: var(--spacing-2) solid;
+    outline-offset: var(--spacing-7);
+    border-radius: calc(0.5 * var(--spacing-1));
+  }
+}

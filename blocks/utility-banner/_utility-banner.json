@@ -1,0 +1,60 @@
+{
+    "definitions": [
+      {
+        "title": "UtilityBanner",
+        "id": "utility-banner",
+        "plugins": {
+          "da": {
+            "name": "utility-banner",
+            "rows": 1,
+            "columns": 3
+          }
+        },
+        "model": "utility-banner"
+      }
+    ],
+    "models": [
+      {
+        "id": "utility-banner",
+        "fields": [
+          {
+            "component": "richtext",
+            "name": "div:nth-child(1)>div:nth-child(1)",
+            "label": "Location Content",
+            "required": false
+          },
+          {
+            "component": "richtext",
+            "name": "div:nth-child(1)>div:nth-child(2)",
+            "label": "Carousel Content"
+          },
+          {
+            "component": "richtext",
+            "name": "div:nth-child(1)>div:nth-child(3)",
+            "label": "Account",
+            "required": false
+          },
+          {
+            "component": "select",
+            "name": "classes",
+            "label": "Style",
+            "valueType": "string",
+            "options": [
+              {
+                "value": "",
+                "name": "Default",
+                "valueType": "string"
+              },
+              {
+                "value": "space-around",
+                "name": "Space Around",
+                "valueType": "string"
+              }
+            ],
+            "value": ""
+          }
+        ]
+      }
+    ],
+    "filters": []
+  }
