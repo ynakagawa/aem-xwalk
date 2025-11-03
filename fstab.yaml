@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://publish-p18253-e1553077.adobeaemcloud.com/bin/franklin.delivery/content/mobility-demo"
+    url: "https://publish-p18253-e1553077.adobeaemcloud.com/content/mobility-demo"
     type: "markup"
     suffix: ".html"
