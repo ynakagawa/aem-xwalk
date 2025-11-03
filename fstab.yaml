@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://publish-p18253-e1553077.adobeaemcloud.com/content/mobility-demo"
+    url: "https://author-p18253-e46622.adobeaemcloud.com/bin/franklin.delivery/ynakagawa/aem-xwalk/main"
     type: "markup"
     suffix: ".html"
