@@ -233,5 +233,24 @@
         "required": false
       }
     ]
+  },
+  {
+    "id": "utility-banner",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "utility-banner-location-content",
+        "label": "Utility Banner Location Content",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "text",
+        "name": "utility-banner-carousel-content",
+        "label": "Utility Banner Carousel Content",
+        "valueType": "string",
+        "required": false
+      }
+    ]
   }
 ]
